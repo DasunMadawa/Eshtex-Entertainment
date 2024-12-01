@@ -6,7 +6,7 @@ import React from 'react'
 
 export default function event() {
   return (
-    <div className='bg-white overflow-x-hidden w-full'>
+    <div className='bg-white overflow-x-hidden w-full flex flex-col items-center'>
       <Cover/>
       <Video/>
       <Descritpion/>
