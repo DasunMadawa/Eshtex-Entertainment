@@ -6,7 +6,7 @@ import Image from 'next/image'
 export default function Cover() {
     return (
         <div
-            className='w-screen h-svh max-h-svh bg-cover bg-center relative'
+            className='h-svh max-h-svh bg-cover bg-center relative'
             style={{ backgroundImage: 'url("/event-home-bg.png")' }}
         >
             {/* buy ticket button */}
