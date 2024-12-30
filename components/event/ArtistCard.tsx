@@ -17,7 +17,7 @@ export default function ArtistCard() {
             <div className='relative overflow-hidden'>
                 <Image src={artistImg} alt='artist' className='' />
 
-                <div className='w-full py-3 lg:py-6 absolute bottom-0 flex justify-around items-center translate-y-[100%] duration-200 ease-in-out group-hover:translate-y-0'>
+                <div className='w-full py-3 lg:py-6 absolute bottom-0 flex justify-center items-center translate-y-[100%] duration-200 ease-in-out group-hover:translate-y-0 text-2xl space-x-[5%]'>
                     <SocialIcon icon={faFacebook} link='' />
                     <SocialIcon icon={faInstagram} link='' />
                     <SocialIcon icon={faXTwitter} link='' />
@@ -47,7 +47,7 @@ const Line = (props: any) => {
     return <hr className={`border-[1px] sm:border-[2px] w-6 sm:w-16 ${props.className}`} />
 }
 
-const SocialIcon = ({icon, link}: any) => {
+const SocialIcon = ({icon, link }: any) => {
     return (
         <a 
         href={link} 

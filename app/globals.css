@@ -84,7 +84,6 @@ html {
 .contacts-icon-wrapper {
   cursor: pointer;
   border-radius: 50%;
-  display: ;
 }
 
 .contacts-icon-wrapper:hover > svg {

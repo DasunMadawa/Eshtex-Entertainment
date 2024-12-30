@@ -3,19 +3,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import EventCard from './EventCard'
 import { EventProps } from '@/interfaces/props/NextSectionProps'
+import { useRouter } from 'next/navigation'
+import ViewAllBtn from './ViewAllBtn'
 
-const PopularSection = ({ eventList }: { eventList: EventProps[] }) => {
+const EventCardSection = ({ eventList, section }: { eventList: EventProps[], section: string }) => {
     return (
         <div className='px-[10%] mb-[10%] max-[450px]:px-[5%] max-[450px]:mb-10'>
             <div className='flex justify-between'>
-                <span className='text-[32px] font-bold text-black ml-4 max-[1280px]:text-2xl max-[450px]:text-xl'>Popular Events</span>
-                <div className='text-[#FFBE0B] flex justify-center items-center text-2xl cursor-pointer max-[1280px]:text-lg max-[450px]:text-sm'>
-                    <span className='mr-4 font-semibold'>View All</span>
-                    <FontAwesomeIcon icon={faArrowRightLong} className='' />
-                </div>
+                <span className='text-[32px] font-bold text-black ml-4 max-[1280px]:text-2xl max-[450px]:text-xl'>{section}</span>
+                <ViewAllBtn path={`${section == "Upcoming Events" ? "upcomingEvents" : "popularEvents" }`} />
             </div>
 
-            <div className='overflow-x-scroll'>
+            <div className='overflow-x-scroll scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent'>
                 <div className='flex flex-row w-max p-4'>
                     {eventList.map(
                         (event, i) => {
@@ -31,4 +30,4 @@ const PopularSection = ({ eventList }: { eventList: EventProps[] }) => {
     )
 }
 
-export default PopularSection;
+export default EventCardSection;

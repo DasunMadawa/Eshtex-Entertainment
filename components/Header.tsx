@@ -6,13 +6,21 @@ import { faFacebook, faXTwitter, faInstagram, faLinkedin } from '@fortawesome/fr
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
-import { redirect } from 'next/navigation'
+import { redirect, usePathname } from 'next/navigation'
+import Link from 'next/link';
 
 const Header = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isNavOpen, setIsNavOpen] = useState(false);
+  
+  const pathname = usePathname()
 
   useEffect(() => {
+    if (pathname != '/') {
+      setActiveSection("event");
+      
+    } 
+
     const sections = document.querySelectorAll('section');
 
     const observer = new IntersectionObserver(
@@ -30,7 +38,7 @@ const Header = () => {
     sections.forEach((section) => observer.observe(section));
 
     return () => observer.disconnect();
-  }, []);
+  }, [pathname]);
 
   return (
     <>
@@ -40,7 +48,7 @@ const Header = () => {
         onClick={() => document.getElementById("menu-icon")?.click()}
       ></div>
 
-      <div className={`${activeSection != 'home' ? "bg-black" : "bg-transparent"} 
+      <div className={`${activeSection != 'home' ? "bg-black" : ""} 
         fixed w-full h-[70px] top-0 flex z-10`}>
         <div className="relative w-[106px] h-[60px] ml-8 mt-1 z-20 max-[1000px]:absolute max-[1000px]:right-4 max-[1000px]:top-0">
           <Image
@@ -87,9 +95,10 @@ const Header = () => {
       </label>
 
       <div
-        className={`${activeSection != 'home' || isNavOpen ? "bg-black" : "bg-transparent"} 
+        className={`${activeSection != 'home' || isNavOpen ? "bg-black" : " "} 
         fixed w-full h-[70px] top-0 flex z-30 max-[1000px]:flex max-[1000px]:flex-col max-[1000px]:w-1/2 max-[1000px]:min-w-[260px] max-[1000px]:h-full duration-500
         ${isNavOpen ? " max-[1000px]:left-0" : " max-[1000px]:-left-full"}
+        ${pathname != "/" ? "bg-black":""}
         `}
       >
         {/* <div className="w-[106px] h-[60px] bg-center bg-cover bg-[url('/logo/logo%20white%20text%20without%20bg.png')] ml-8"></div> */}
@@ -110,11 +119,11 @@ const Header = () => {
 
         <nav className='flex-grow w-max text-xl font-bold text-white z-20 max-[1000px]:mt-24 max-[1000px]:w-full'>
           <ul className='list-none flex justify-center items-center h-full gap-x-[2%] max-[1000px]:flex-col max-[1000px]:space-y-3 max-[1000px]:h-max'>
-            <li className={`${activeSection === 'home' ? 'text-[#FFBE0B] border-b-[#FFBE0B]' : ''} mx-4 border-b-4 border-transparent`} onClick={() => document.getElementById("menu-icon")?.click()}><a href="#home">Home</a></li>
-            <li className={`${activeSection === 'next' ? 'text-[#FFBE0B] border-b-[#FFBE0B]' : ''} mx-4 border-b-4 border-transparent`} onClick={() => document.getElementById("menu-icon")?.click()}><a href="#next">Next</a></li>
-            <li className={`${activeSection === 'upcoming' ? 'text-[#FFBE0B] border-b-[#FFBE0B]' : ''} mx-4 border-b-4 border-transparent`} onClick={() => document.getElementById("menu-icon")?.click()}><a href="#upcoming">Upcoming</a></li>
-            <li className={`${activeSection === 'popular' ? 'text-[#FFBE0B] border-b-[#FFBE0B]' : ''} mx-4 border-b-4 border-transparent`} onClick={() => document.getElementById("menu-icon")?.click()}><a href="#popular">Popular</a></li>
-            <li className={`${activeSection === 'contact' ? 'text-[#FFBE0B] border-b-[#FFBE0B]' : ''} mx-4 border-b-4 border-transparent`} onClick={() => document.getElementById("menu-icon")?.click()}><a href="#contact">Contact</a></li>
+            <li className={`${activeSection === 'home' ? 'text-[#FFBE0B] border-b-[#FFBE0B]' : ''} mx-4 border-b-4 border-transparent`} onClick={() => document.getElementById("menu-icon")?.click()}><Link href="/#home">Home</Link></li>
+            <li className={`${activeSection === 'next' ? 'text-[#FFBE0B] border-b-[#FFBE0B]' : ''} mx-4 border-b-4 border-transparent`} onClick={() => document.getElementById("menu-icon")?.click()}><Link href="/#next">Next</Link></li>
+            <li className={`${activeSection === 'upcoming' ? 'text-[#FFBE0B] border-b-[#FFBE0B]' : ''} mx-4 border-b-4 border-transparent`} onClick={() => document.getElementById("menu-icon")?.click()}><Link href="/#upcoming">Upcoming</Link></li>
+            <li className={`${activeSection === 'popular' ? 'text-[#FFBE0B] border-b-[#FFBE0B]' : ''} mx-4 border-b-4 border-transparent`} onClick={() => document.getElementById("menu-icon")?.click()}><Link href="/#popular">Popular</Link></li>
+            <li className={`${activeSection === 'contact' ? 'text-[#FFBE0B] border-b-[#FFBE0B]' : ''} mx-4 border-b-4 border-transparent`} onClick={() => document.getElementById("menu-icon")?.click()}><Link href="/#contact">Contact</Link></li>
           </ul>
         </nav>
 

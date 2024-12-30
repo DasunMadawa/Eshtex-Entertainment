@@ -1,12 +1,19 @@
+'use client'
 import { EventProps } from '@/interfaces/props/NextSectionProps';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import React from 'react'
 
-const EventCard = (props: EventProps ) => {
-    const { id , event_name, place, city, date, time, cover_img } = props.data;
+const EventCard = (props: EventProps) => {
+    const { id, event_name, place, city, date, time, cover_img } = props.data;
+    const router = useRouter();
 
     return (
-        <div className='flex w-[280px] aspect-[280/471] rounded-[10px] flex-col drop-shadow-[0_8px_10px_rgba(72,149,239,0.25)] my-4 mr-6 cursor-pointer max-[1280px]:w-[220px] max-[450px]:w-[195px]'>
+        <div className='flex w-[280px] aspect-[280/471] rounded-[10px] flex-col drop-shadow-[0_8px_10px_rgba(72,149,239,0.25)] my-4 mr-6 cursor-pointer max-[1280px]:w-[220px] max-[450px]:w-[195px]'
+            onClick={() => {
+                router.push("/event");
+            }}
+        >
             <div className='relative w-full aspect-[280/300] rounded-t-[10px]'>
                 <Image
                     src={cover_img}
