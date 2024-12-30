@@ -1,9 +1,6 @@
-import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import EventCard from './EventCard'
 import { EventProps } from '@/interfaces/props/NextSectionProps'
-import { useRouter } from 'next/navigation'
 import ViewAllBtn from './ViewAllBtn'
 
 const EventCardSection = ({ eventList, section }: { eventList: EventProps[], section: string }) => {

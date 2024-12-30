@@ -1,5 +1,3 @@
-import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import EventCard from './EventCard'
 import { EventProps } from '@/interfaces/props/NextSectionProps'

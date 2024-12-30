@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faXTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 
 import { redirect, usePathname } from 'next/navigation'
 import Link from 'next/link';
@@ -18,7 +17,7 @@ const Header = () => {
   useEffect(() => {
     if (pathname != '/') {
       setActiveSection("event");
-      
+
     } 
 
     const sections = document.querySelectorAll('section');

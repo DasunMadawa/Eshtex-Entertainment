@@ -1,6 +1,5 @@
 import React from 'react'
 import ArtistCard from './ArtistCard'
-import { randomUUID } from 'crypto'
 
 export default function Artists() {
   return (

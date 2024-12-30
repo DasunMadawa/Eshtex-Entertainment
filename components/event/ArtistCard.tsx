@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import artistImg from '../../public/artist.png'
 import { faFacebook, faInstagram, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons'
-import { faX } from '@fortawesome/free-solid-svg-icons'
 
 export default function ArtistCard() {
 

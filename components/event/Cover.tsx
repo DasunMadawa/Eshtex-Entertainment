@@ -1,8 +1,5 @@
 import React from 'react'
 
-import coverImg from '../../public/event-home-bg.png'
-import Image from 'next/image'
-
 export default function Cover() {
     return (
         <div
