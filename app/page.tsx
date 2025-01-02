@@ -1,4 +1,4 @@
-import ContactSection from "@/components/homePage/ContactSection";
+import ContactSection from "@/components/ContactSection";
 import HeroSection from "@/components/homePage/HeroSection";
 import NextSection from "@/components/homePage/NextSection";
 import EventCardSection from "@/components/homePage/EventCardSection";

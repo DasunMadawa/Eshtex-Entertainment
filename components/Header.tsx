@@ -94,7 +94,7 @@ const Header = () => {
       </label>
 
       <div
-        className={`${activeSection != 'home' || isNavOpen ? "bg-black" : " "} 
+        className={`${activeSection != 'home' || isNavOpen ? "max-[1000px]:bg-black" : " "} 
         fixed w-full h-[70px] top-0 flex z-30 max-[1000px]:flex max-[1000px]:flex-col max-[1000px]:w-1/2 max-[1000px]:min-w-[260px] max-[1000px]:h-full duration-500
         ${isNavOpen ? " max-[1000px]:left-0" : " max-[1000px]:-left-full"}
         ${pathname != "/" ? "bg-black":""}

@@ -1,4 +1,4 @@
-import ContactSection from '@/components/homePage/ContactSection';
+import ContactSection from '@/components/ContactSection';
 import EventList from '@/components/homePage/EventList';
 import React from 'react'
 
@@ -45,7 +45,7 @@ const popularEvents = () => {
                     ]
                 }
             />
-            
+
             <ContactSection />
         </div>
     )

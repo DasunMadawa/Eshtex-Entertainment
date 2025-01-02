@@ -17,17 +17,17 @@ export const NextSection = (props:EventProps) => {
                         <span className="px-4 max-[950px]:px-1"> LAUNCHING :</span>
                     </div>
                     <div className='w-max h-max max-[950px]:w-full'>
-                        <Countdown targetDate='2024-12-31T23:59:59' />
+                        <Countdown targetDate='2024-02-01T19:00:00' />
 
                     </div>
                         <div className='relative flex w-full h-max justify-between items-center text-4xl font-extrabold'>
-                            <div className={`relative w-3/4 textsh font-sans text-[#858584] text-4xl font-bold flex flex-col max-[950px]:text-[10px]`}>
-                                <span className='max-[950px]:h-4 inline-block'>{place.toUpperCase()}</span>
+                            <div className={`relative w-3/4 textsh font-sans text-[#858584] text-3xl font-bold flex flex-col max-[950px]:text-[10px]`}>
+                                <span className='max-[950px]:h-3 inline-block'>{place.toUpperCase()}</span>
                                 <span className='max-[950px]:h-6 inline-block'>{city.toUpperCase()}</span>
                             </div>
 
-                            <div className='absolute flex w-1/3 h-max text-4xl flex-col items-end font-extrabold right-0 bottom-0 text-[#C65F1C] max-[950px]:text-[10px]'>
-                                <h1 className='max-[950px]:h-4 inline-block'>{date.toUpperCase()}</h1>
+                            <div className='absolute flex w-1/3 h-max text-3xl flex-col items-end font-extrabold right-0 bottom-0 text-[#C65F1C] max-[950px]:text-[10px]'>
+                                <h1 className='max-[950px]:h-3 inline-block'>{date.toUpperCase()}</h1>
                                 <h1 className='max-[950px]:h-6 inline-block'>{time.toUpperCase()}</h1>
                             </div>
 
@@ -42,11 +42,20 @@ export const NextSection = (props:EventProps) => {
                         layout='fill'
                         className='w-full h-full object-cover rounded-r-[20px]'
                     />
-                    <h1 className={`w-max font-sans text-white text-4xl font-bold absolute left-4 top-4 rotate-90 origin-bottom-left max-[950px]:text-xs max-[950px]:left-2 max-[950px]:top-2`}>{event_name.toUpperCase()}</h1>
+                    {/* <h1 className={`w-max font-sans text-white text-4xl font-bold absolute left-4 top-4 rotate-90 origin-bottom-left max-[950px]:text-xs max-[950px]:left-2 max-[950px]:top-2`}>{event_name.toUpperCase()}</h1> */}
+                    <h1 className={`w-max h-max font-sans text-white text-5xl font-bold absolute left-0 -top-[25%] right-0 bottom-0 rotate-90 m-auto max-[950px]:text-xs`}>{event_name.toUpperCase()}</h1>
                 </div>
 
             </div>
-            <BuyTicketsBtn />
+            {/* <BuyTicketsBtn /> */}
+            <div className='w-full h-full flex items-center justify-center mt-[5%] max-[950px]:mt-10 max-[380px]:mt-0'>
+                {/* <button>Buy Ticket</button> */}
+                <div className='rounded-lg'>
+                    <button className="button-89" role="button">
+                        <span className=' text-2xl font-bold'>Buy Tickets</span>
+                    </button>
+                </div>
+            </div>
 
         </div>
     )
