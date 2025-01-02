@@ -6,7 +6,7 @@ import EventCardSection from "@/components/homePage/EventCardSection";
 export default function Home() {
   return (
     <div className="">
-      <section id="home" className="bg-gray-100">
+      <section id="home" className="">
         <HeroSection />
       </section>
 
