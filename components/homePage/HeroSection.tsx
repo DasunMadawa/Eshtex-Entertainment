@@ -10,7 +10,7 @@ const ibm_plex_mono = IBM_Plex_Mono({
 
 const HeroSection = () => {
     return (
-        <div className='relative bg-black w-full min-[1000px]:max-h-[945px] min-[1000px]:aspect-[16/9] max-[1000px]:max-h-[1000px] max-[1000px]:min-h-[600px] max-[1000px]:h-[95vh]'>
+        <div className='relative bg-black w-full min-[1000px]:max-h-[945px] min-[1000px]:aspect-[16/9] max-[1000px]:max-h-[1000px] max-[1000px]:min-h-[600px] max-[1000px]:h-[96vh]'>
             <Image
                 src="/img/hero sec bg img.jpg"
                 alt="Logo"
