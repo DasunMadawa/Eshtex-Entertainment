@@ -63,11 +63,11 @@ const TicketsPurchaseView = (props: TicketsPurchaseViewProps) => {
                 </div>
                 :
                 <>
-                    <div className='relative bg-white w-max h-max p-4 rounded-[15px] flex max-[550px]:flex-col max-[550px]:scale-90 max-[1600px]:scale-90 max-[1366px]:scale-75 max-[950px]:hidden max-[550px]:flex z-10'>
-                        <FontAwesomeIcon icon={faX} className='absolute right-4 top-4 cursor-pointer hover:scale-110 hover:text-black duration-300  max-[550px]:right-2  max-[550px]:top-2  max-[550px]:text-[10px]'
+                    <div className='relative bg-white w-max h-max p-4 rounded-[15px] flex max-[550px]:flex-col max-[550px]:scale-100 max-[1600px]:scale-90 max-[1366px]:scale-75 max-[950px]:hidden max-[550px]:flex z-10'>
+                        <FontAwesomeIcon icon={faX} className='absolute right-4 top-4 cursor-pointer hover:scale-110 hover:text-black duration-300 max-[550px]:right-2  max-[550px]:top-2   '
                             onClick={props.data.onClose}
                         />
-                        <div className='relative w-[496px] aspect-[4/5] rounded-md max-[550px]:w-[250px]'>
+                        <div className='relative w-[496px] aspect-[4/5] rounded-md max-[550px]:w-[250px] max-[550px]:mt-2'>
                             <Image
                                 src="/img/alexandria cover photo.jpeg"
                                 alt='Alexandria'
