@@ -49,7 +49,7 @@ const TicketsPurchaseView = (props: TicketsPurchaseViewProps) => {
     }, [tickets]);
 
     return (
-        <div className='fixed left-0 top-0 w-full h-full z-30 flex justify-center items-center'>
+        <div className='fixed left-0 top-0 w-full h-full z-50 flex justify-center items-center'>
             <div className='absolute w-full h-full left-0 top-0 bg-black opacity-50'></div>
             {isDetailsOpen ?
                 <div className='relative z-20 bg-white w-max h-max p-4 rounded-[15px] max-[1600px]:scale-90 max-[1366px]:scale-75 max-[950px]:scale-100'>
