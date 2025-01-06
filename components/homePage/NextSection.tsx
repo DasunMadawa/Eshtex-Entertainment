@@ -1,11 +1,14 @@
+'use client'
 import Image from 'next/image';
-import React from 'react'
+import React, { useState } from 'react'
 import Countdown from './CountDown';
 import BuyTicketsBtn from './BuyTicketsBtn';
 import { EventProps } from '@/interfaces/props/NextSectionProps';
+import TicketsPurchaseView from '../TicketsPurchaseView';
 
-export const NextSection = (props:EventProps) => {
-    const { id , event_name, place, city, date, time } = props.data;
+export const NextSection = (props: EventProps) => {
+    const { id, event_name, place, city, date, time } = props.data;
+    const [isTicketsPurchaseViewOpen, setIsTicketsPurchaseViewOpen] = useState(false);
 
     return (
         <div className='flex flex-col w-full px-[10%] py-[8%] justify-center items-center max-[950px]:py-[10%] max-[740px]:pt-[20%]  max-[550px]:pt-[10%]'>
@@ -20,18 +23,18 @@ export const NextSection = (props:EventProps) => {
                         <Countdown targetDate='2024-02-01T19:00:00' />
 
                     </div>
-                        <div className='relative flex w-full h-max justify-between items-center text-4xl font-extrabold'>
-                            <div className={`relative w-3/4 textsh font-sans text-[#858584] text-3xl font-bold flex flex-col max-[950px]:text-[10px]`}>
-                                <span className='max-[950px]:h-3 inline-block'>{place.toUpperCase()}</span>
-                                <span className='max-[950px]:h-6 inline-block'>{city.toUpperCase()}</span>
-                            </div>
-
-                            <div className='absolute flex w-1/3 h-max text-3xl flex-col items-end font-extrabold right-0 bottom-0 text-[#C65F1C] max-[950px]:text-[10px]'>
-                                <h1 className='max-[950px]:h-3 inline-block'>{date.toUpperCase()}</h1>
-                                <h1 className='max-[950px]:h-6 inline-block'>{time.toUpperCase()}</h1>
-                            </div>
-
+                    <div className='relative flex w-full h-max justify-between items-center text-4xl font-extrabold'>
+                        <div className={`relative w-3/4 textsh font-sans text-[#858584] text-3xl font-bold flex flex-col max-[950px]:text-[10px]`}>
+                            <span className='max-[950px]:h-3 inline-block'>{place.toUpperCase()}</span>
+                            <span className='max-[950px]:h-6 inline-block'>{city.toUpperCase()}</span>
                         </div>
+
+                        <div className='absolute flex w-1/3 h-max text-3xl flex-col items-end font-extrabold right-0 bottom-0 text-[#C65F1C] max-[950px]:text-[10px]'>
+                            <h1 className='max-[950px]:h-3 inline-block'>{date.toUpperCase()}</h1>
+                            <h1 className='max-[950px]:h-6 inline-block'>{time.toUpperCase()}</h1>
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -51,11 +54,48 @@ export const NextSection = (props:EventProps) => {
             <div className='w-full h-full flex items-center justify-center mt-[5%] max-[950px]:mt-10 max-[380px]:mt-0'>
                 {/* <button>Buy Ticket</button> */}
                 <div className='rounded-lg'>
-                    <button className="button-89" role="button">
+                    <button className="button-89" role="button" onClick={() => setIsTicketsPurchaseViewOpen(true)}>
                         <span className=' text-2xl font-bold'>Buy Tickets</span>
                     </button>
                 </div>
             </div>
+
+            {isTicketsPurchaseViewOpen &&
+                <TicketsPurchaseView
+                    data={{
+                        event_name: "Alexandria",
+                        event_theme_line: "Live In Concert",
+                        date: "2025-02-01",
+                        time: "19:00",
+                        place: "Public Ground",
+                        city: "Horana",
+                        cover_img: "https://example.com/cover.jpg",
+                        tickets: [
+                            {
+                                id: "1",
+                                type: "General",
+                                price: 1500,
+                                avl_qty: 4,
+                            },
+                            {
+                                id: "2",
+                                type: "VIP",
+                                price: 3000,
+                                avl_qty: 5,
+                            },
+                            {
+                                id: "3",
+                                type: "VVIP",
+                                price: 5000,
+                                avl_qty: 2,
+                            },
+                        ], // Replace with your TicketModel properties
+                        onClose: () => setIsTicketsPurchaseViewOpen(false),
+                    }}
+                />
+
+            }
+
 
         </div>
     )

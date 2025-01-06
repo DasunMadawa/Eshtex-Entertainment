@@ -2,6 +2,7 @@ import ContactSection from "@/components/ContactSection";
 import HeroSection from "@/components/homePage/HeroSection";
 import NextSection from "@/components/homePage/NextSection";
 import EventCardSection from "@/components/homePage/EventCardSection";
+import TicketsPurchaseView from "@/components/TicketsPurchaseView";
 
 export default function Home() {
   return (
