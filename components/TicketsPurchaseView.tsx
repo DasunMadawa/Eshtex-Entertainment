@@ -162,7 +162,7 @@ const TicketsPurchaseView = (props: TicketsPurchaseViewProps) => {
                     </div>
 
                     <div className='relative bg-white w-max h-max p-4 rounded-[15px] flex max-[950px]:flex-col max-[950px]:scale-100 max-[1600px]:scale-90 max-[1366px]:scale-75 min-[950px]:hidden max-[550px]:hidden z-10'>
-                        <FontAwesomeIcon icon={faX} className='absolute right-4 top-4 cursor-pointer hover:scale-110 hover:text-black duration-300' />
+                        <FontAwesomeIcon icon={faX} className='absolute right-4 top-4 cursor-pointer hover:scale-110 hover:text-black duration-300' onClick={props.data.onClose} />
                         <div className='flex'>
                             <div className='relative w-[496px] aspect-[4/5] rounded-md max-[950px]:w-[250px]'>
                                 <Image
