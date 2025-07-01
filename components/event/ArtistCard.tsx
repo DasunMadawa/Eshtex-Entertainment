@@ -2,25 +2,26 @@ import Image from 'next/image'
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import artistImg from '../../public/artist.png'
-import { faFacebook, faInstagram, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons'
 
-export default function ArtistCard() {
+import { faFacebook, faInstagram, faLinkedin, faTiktok, faXTwitter } from '@fortawesome/free-brands-svg-icons'
+import { ArtistCardDataProps } from '@/interfaces/props/ArtistCardProps'
 
-    const artistName = 'Melody Maven'
-    const artistTeam = 'Sound Wave'
+const ArtistCard = (props : ArtistCardDataProps) => {
+
+    const artistName = props.data.name;
+    const artistTeam = props.data.band;
 
     return (
         <div className='group'>
             {/* artist image */}
-            <div className='relative overflow-hidden'>
-                <Image src={artistImg} alt='artist' className='' />
+            <div className='relative overflow-hidden bg-slate-600'>
+                <Image src={props.data.cover_img} width={300} height={450} alt='artist' className='' />
 
                 <div className='w-full py-3 lg:py-6 absolute bottom-0 flex justify-center items-center translate-y-[100%] duration-200 ease-in-out group-hover:translate-y-0 text-2xl space-x-[5%]'>
-                    <SocialIcon icon={faFacebook} link='' />
-                    <SocialIcon icon={faInstagram} link='' />
-                    <SocialIcon icon={faXTwitter} link='' />
-                    <SocialIcon icon={faLinkedin} link='' />
+                    {/* <SocialIcon icon={faFacebook} link={props.data.fb} />
+                    <SocialIcon icon={faInstagram} link={props.data.insta} />
+                    <SocialIcon icon={faTiktok} link={props.data.tiktok} />
+                    <SocialIcon icon={faLinkedin} link='' /> */}
                 </div>
             </div>
 
@@ -56,3 +57,5 @@ const SocialIcon = ({icon, link }: any) => {
         </a>
     )
 }
+
+export default ArtistCard;

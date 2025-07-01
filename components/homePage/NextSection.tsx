@@ -20,7 +20,7 @@ export const NextSection = (props: EventProps) => {
                         <span className="px-4 max-[950px]:px-1"> LAUNCHING :</span>
                     </div>
                     <div className='w-max h-max max-[950px]:w-full'>
-                        <Countdown targetDate='2024-02-01T19:00:00' />
+                        <Countdown targetDate='2025-08-16T17:00:00' />
 
                     </div>
                     <div className='relative flex w-full h-max justify-between items-center text-4xl font-extrabold'>
@@ -53,11 +53,11 @@ export const NextSection = (props: EventProps) => {
             {/* <BuyTicketsBtn /> */}
             <div className='w-full h-full flex items-center justify-center mt-[5%] max-[950px]:mt-10 max-[380px]:mt-0'>
                 {/* <button>Buy Ticket</button> */}
-                <div className='rounded-lg'>
-                    <button className="button-89" role="button" onClick={() => setIsTicketsPurchaseViewOpen(true)}>
+                <a href='https://manobhawa.gpass.lk/' className='rounded-lg'>
+                    <button className="button-89" role="button" onClick={() => {}}>
                         <span className=' text-2xl font-bold'>Buy Tickets</span>
                     </button>
-                </div>
+                </a>
             </div>
 
             {isTicketsPurchaseViewOpen &&

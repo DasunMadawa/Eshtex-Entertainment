@@ -10,7 +10,7 @@ const EventList = ({ eventList , section }: { eventList: EventProps[] , section:
             </div>
 
             <div className=''>
-                <div className='flex flex-row flex-wrap w-full justify-around pt-4'>
+                <div className='flex flex-row flex-wrap w-full justify-between pt-4'>
                     {eventList.map(
                         (event, i) => {
                             return <EventCard key={event.data.id} data={event.data} />

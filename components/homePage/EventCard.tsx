@@ -15,7 +15,7 @@ const EventCard = (props: EventProps) => {
             hover:drop-shadow-[0_8px_10px_rgba(72,149,239,0.5)]'
 
             onClick={() => {
-                router.push("/event");
+                router.push(`/event?id=${id.toLowerCase()}`);
             }}
         >
             <div className='relative w-full aspect-[280/300] rounded-t-[10px] overflow-hidden'>

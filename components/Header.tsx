@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook, faXTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faXTwitter, faInstagram, faLinkedin, faTiktok } from '@fortawesome/free-brands-svg-icons';
 import Image from 'next/image';
 
 import { redirect, usePathname } from 'next/navigation'
@@ -11,14 +11,14 @@ import Link from 'next/link';
 const Header = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isNavOpen, setIsNavOpen] = useState(false);
-  
+
   const pathname = usePathname()
 
   useEffect(() => {
     if (pathname != '/') {
       setActiveSection("event");
 
-    } 
+    }
 
     const sections = document.querySelectorAll('section');
 
@@ -51,8 +51,8 @@ const Header = () => {
         fixed w-full h-[70px] top-0 flex z-10`}>
         <div className="relative w-[106px] h-[60px] ml-8 mt-1 z-20 max-[1000px]:absolute max-[1000px]:right-4 max-[1000px]:top-0">
           <Image
-            src="/logo/logo white text without bg.png"
-            alt="Logo"
+            src="/logo/Manobhawa - 2025 name Design Tranz.png"
+            alt="Logo 123"
             width={106}
             height={60}
             className="w-full h-full object-cover cursor-pointer"
@@ -97,14 +97,14 @@ const Header = () => {
         className={`${activeSection != 'home' || isNavOpen ? "max-[1000px]:bg-black" : " "} 
         fixed w-full h-[70px] top-0 flex z-30 max-[1000px]:flex max-[1000px]:flex-col max-[1000px]:w-1/2 max-[1000px]:min-w-[260px] max-[1000px]:h-full duration-500
         ${isNavOpen ? " max-[1000px]:left-0" : " max-[1000px]:-left-full"}
-        ${pathname != "/" ? "bg-black":""}
+        ${pathname != "/" ? "bg-black" : ""}
         `}
       >
         {/* <div className="w-[106px] h-[60px] bg-center bg-cover bg-[url('/logo/logo%20white%20text%20without%20bg.png')] ml-8"></div> */}
 
         <div className="relative w-[106px] h-[60px] ml-8 mt-1 z-20 max-[1000px]:absolute max-[1000px]:right-4 max-[1000px]:top-0">
           <Image
-            src="/logo/logo white text without bg.png"
+            src="/logo/Manobhawa - 2025 name Design Tranz.png"
             alt="Logo"
             width={106}
             height={60}
@@ -121,23 +121,62 @@ const Header = () => {
             <li className={`${activeSection === 'home' ? 'text-[#FFBE0B] border-b-[#FFBE0B]' : ''} mx-4 border-b-4 border-transparent`} onClick={() => document.getElementById("menu-icon")?.click()}><Link href="/#home">Home</Link></li>
             <li className={`${activeSection === 'next' ? 'text-[#FFBE0B] border-b-[#FFBE0B]' : ''} mx-4 border-b-4 border-transparent`} onClick={() => document.getElementById("menu-icon")?.click()}><Link href="/#next">Next</Link></li>
             <li className={`${activeSection === 'upcoming' ? 'text-[#FFBE0B] border-b-[#FFBE0B]' : ''} mx-4 border-b-4 border-transparent`} onClick={() => document.getElementById("menu-icon")?.click()}><Link href="/#upcoming">Upcoming</Link></li>
-            <li className={`${activeSection === 'popular' ? 'text-[#FFBE0B] border-b-[#FFBE0B]' : ''} mx-4 border-b-4 border-transparent`} onClick={() => document.getElementById("menu-icon")?.click()}><Link href="/#popular">Popular</Link></li>
+            {/* <li className={`${activeSection === 'popular' ? 'text-[#FFBE0B] border-b-[#FFBE0B]' : ''} mx-4 border-b-4 border-transparent`} onClick={() => document.getElementById("menu-icon")?.click()}><Link href="/#popular">Popular</Link></li> */}
             <li className={`${activeSection === 'contact' ? 'text-[#FFBE0B] border-b-[#FFBE0B]' : ''} mx-4 border-b-4 border-transparent`} onClick={() => document.getElementById("menu-icon")?.click()}><Link href="/#contact">Contact</Link></li>
           </ul>
         </nav>
 
         <div
           className='w-[17%] min-w-[300px] h-full text-white text-3xl flex z-20 max-[1000px]:h-max 
-          max-[1000px]:min-w-[260px] max-[1000px]:w-full max-[1000px]:mb-8 '
+          max-[1000px]:min-w-[260px] max-[1000px]:w-full max-[1000px]:mb-8 justify-end mr-[2%]'
         >
-          <div className='w-[62%] h-full flex justify-around items-center max-[1000px]:w-full max-[1000px]:justify-center max-[1000px]:space-x-6'>
-            <FontAwesomeIcon icon={faFacebook} className='cursor-pointer hover:text-[#1877F2] hover:scale-110 duration-300' />
+          {/* <div className='w-[62%] h-full flex justify-around items-center max-[1000px]:w-full max-[1000px]:justify-center max-[1000px]:space-x-6'>
+            <a href={"http://localhost:3000/event?id=manobhawa-2025"}><FontAwesomeIcon icon={faFacebook} className='cursor-pointer hover:text-[#1877F2] hover:scale-110 duration-300' /></a>
             <FontAwesomeIcon icon={faInstagram} className='cursor-pointer hover:text-[#d62976] hover:scale-110 duration-300' />
             <FontAwesomeIcon icon={faXTwitter} className='cursor-pointer hover:text-white hover:scale-110 duration-300' />
             <FontAwesomeIcon icon={faLinkedin} className='cursor-pointer hover:text-[#0077B5] hover:scale-110 duration-300' />
+          </div> */}
+
+          <div className='w-[62%] h-full flex justify-around items-center max-[1000px]:w-full max-[1000px]:justify-center max-[1000px]:space-x-6 '>
+            <a
+              href="https://www.facebook.com/manobhawa.official"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Facebook"
+            >
+              <FontAwesomeIcon
+                icon={faFacebook}
+                className='cursor-pointer hover:text-[#1877F2] hover:scale-110 duration-300'
+              />
+            </a>
+
+            <a
+              href="https://www.instagram.com/manobhawa.official"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Instagram"
+            >
+              <FontAwesomeIcon
+                icon={faInstagram}
+                className='cursor-pointer hover:text-[#d62976] hover:scale-110 duration-300'
+              />
+            </a>
+
+            <a
+              href="https://www.tiktok.com/@manobhawa.official"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Tiktok"
+            >
+              <FontAwesomeIcon
+                icon={faTiktok}
+                className='cursor-pointer hover:text-white hover:scale-110 duration-300'
+              />
+            </a>
           </div>
 
-          <div className='w-max flex items-center mx-10 z-20 max-[1000px]:absolute max-[1000px]:top-80 max-[1000px]:left-0 max-[1000px]:right-0 max-[1000px]:m-auto'>
+
+          {/* <div className='w-max flex items-center mx-10 z-20 max-[1000px]:absolute max-[1000px]:top-80 max-[1000px]:left-0 max-[1000px]:right-0 max-[1000px]:m-auto'>
             <label className="grid cursor-pointer place-items-center rounded-xl">
               <input
                 type="checkbox"
@@ -172,7 +211,8 @@ const Header = () => {
                 <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
               </svg>
             </label>
-          </div>
+          </div> */}
+          
 
         </div>
 
