@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: `This is no ordinary concert. For the first time in Sri Lanka, a powerful orchestra will perform music from popular TV series live on stage. 
             Featuring 11 exceptional artists and two unique musical vibes, this event takes audiences on a thrilling journey through iconic soundtracks, 
             reimagined with the emotional depth of a full orchestra. It’s not just a concert—it’s a cinematic voyage through music. Get ready to sail into 
-            an orchestral storm and experience a night to remember.`,
+            an orchestral storm and experience a night to remember. `,
 
   keywords: [
     "Manobhawa",
