@@ -59,14 +59,14 @@ const ContactSection = () => {
                                 className="w-full h-full object-cover"
                             />
                         </div>
-                        <h1 className='text-4xl font-bold text-white max-[1315px]:text-2xl max-[550px]:text-xl max-[450px]:text-sm'>ESHTEX ENTERTAINMENT</h1>
+                        <h1 className='text-4xl font-bold text-white max-[1315px]:text-2xl max-[550px]:text-xl max-[450px]:text-sm'>MANOBHAWA</h1>
                     </div>
                     <div className='flex flex-col text-white font-bold text-2xl xl:w-[16.6%] xl:items-end w-[50%] items-center max-[1315px]:text-xl max-[550px]:text-base max-[450px]:text-sm'>
                         <div className='flex flex-col space-y-1 w-max items-center'>
                             <a href="#home" className='hover:text-[#FFBE0B] w-max'>Home</a>
                             <a href="#next" className='hover:text-[#FFBE0B] w-max'>Next Events</a>
                             <a href="#upcoming" className='hover:text-[#FFBE0B] w-max'>Upcoming Events</a>
-                            <a href="#popular" className='hover:text-[#FFBE0B] w-max'>Popular Events</a>
+                            {/* <a href="#popular" className='hover:text-[#FFBE0B] w-max'>Popular Events</a> */}
                         </div>
                     </div>
                     <div className='min-[1280px]:w-[50%] text-center xl:px-[10%] px-4 max-[1280px]:mt-10 max-[450px]:mt-4'>
