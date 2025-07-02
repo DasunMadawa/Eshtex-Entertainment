@@ -29,7 +29,7 @@ const ContactSection = () => {
                                 className="w-full h-full object-cover"
                             />
                         </div>
-                        <h1 className='text-4xl font-bold text-white max-[1315px]:text-2xl max-[550px]:text-xl max-[450px]:text-sm'>MANOBHAWA</h1>
+                        {/* <h1 className='text-4xl font-bold text-white max-[1315px]:text-2xl max-[550px]:text-xl max-[450px]:text-sm'>MANOBHAWA</h1> */}
                     </div>
                     <div className='flex-grow w-[50%] text-center xl:px-[5%] max-[1280px]:pl-[10%] max-[450px]:mt-4 pt-4'>
                         <p className='text-2xl font-bold text-white leading-8 max-[1315px]:text-xl max-[550px]:text-base max-[450px]:text-xs'>
@@ -59,7 +59,7 @@ const ContactSection = () => {
                                 className="w-full h-full object-cover"
                             />
                         </div>
-                        <h1 className='text-4xl font-bold text-white max-[1315px]:text-2xl max-[550px]:text-xl max-[450px]:text-sm'>MANOBHAWA</h1>
+                        {/* <h1 className='text-4xl font-bold text-white max-[1315px]:text-2xl max-[550px]:text-xl max-[450px]:text-sm'>MANOBHAWA</h1> */}
                     </div>
                     <div className='flex flex-col text-white font-bold text-2xl xl:w-[16.6%] xl:items-end w-[50%] items-center max-[1315px]:text-xl max-[550px]:text-base max-[450px]:text-sm'>
                         <div className='flex flex-col space-y-1 w-max items-center'>
