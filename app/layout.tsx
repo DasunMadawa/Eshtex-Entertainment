@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     siteName: "Manobhawa",
     images: [
       {
-        url: "/Manobhawa - 2025 name Design Tranz.ico",
+        url: "/Manobhawa icon.ico",
         width: 1200,
         height: 630,
         alt: "Manobhawa Logo",
