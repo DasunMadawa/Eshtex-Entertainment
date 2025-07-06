@@ -16,11 +16,17 @@ export const metadata: Metadata = {
             an orchestral storm and experience a night to remember. `,
 
   keywords: [
+    "Manobhava",
     "Manobhawa",
+    "Manobawa",
     "MANOBHAWA",
+    "MANOBAWA",
     "Manobhawa Live In Orchestra",
+    "Manobawa Live In Orchestra",
     "MANOBHAWA LIVE IN ORCHESTRA",
+    "MANOBAWA LIVE IN ORCHESTRA",
     "manobhawa live in orchestra",
+    "manobawa live in orchestra",
     "මනෝභාව",
     "මනෝබාව",
     "freeze events",
